@@ -1,0 +1,7 @@
+select Email from (
+select Email, count(Email) as Email_Number
+from Person
+group by Email
+) as Stats_of_Email
+where Email_Number> 1
+;
